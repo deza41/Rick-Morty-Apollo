@@ -63,49 +63,50 @@ const Home = () => {
 
     //output
     return(
-      <Container>
-      <Row>
-        <Col xs={6}>
-          <Search searchList={searchList} />
-          <div id="fixedContainerLeft">
-            <br/>
-            {data.length > 0 ? 'No Items': <DisplayList characters={data} charSearch={charSearch}  getCharacterInfo={getCharacterInfo}/>}
-            <button onClick={() => {
-              // const{ nextPage } = data.info
-              // console.log(data.characters.info.next);
-              if(data.characters.info.next !== null)
-              {
-              fetchMore({
-                variables: {
-                  page: data.characters.info.next,
-                  search: charSearch,
-                },
-                updateQuery: (prevResult, {fetchMoreResult}) =>
+      <Container fluid>
+        <div id="loading"></div>
+        <div id='searchBar'><Search searchList={searchList}/></div>
+        <Row>
+          <Col> 
+            <div id="fixedContainerLeft">
+              {data.length > 0 ? 'No Items': <DisplayList characters={data} charSearch={charSearch}  getCharacterInfo={getCharacterInfo}/>}
+              <button onClick={() => {
+                // const{ nextPage } = data.info
+                // console.log(data.characters.info.next);
+                if(data.characters.info.next !== null)
                 {
-                  // console.log(prevResult);
-                  // console.log(fetchMoreResult);
+                fetchMore({
+                  variables: {
+                    page: data.characters.info.next,
+                    search: charSearch,
+                  },
+                  updateQuery: (prevResult, {fetchMoreResult}) =>
+                  {
+                    // console.log(prevResult);
+                    // console.log(fetchMoreResult);
 
-                  // fetchMoreResult.characters.results = [
-                  //   ...prevResult.characters.results,
-                  //   ...fetchMoreResult.characters.results
-                  // ];
-                  return fetchMoreResult;
-                }
-              });
-            }
-            else{
-              alert('No more Results')
-            }
-            }}>Load More</button>
-        </div>
-        </Col>
-        <Col xs={6}>
-        <div id="fixedContainerRight">
-        {selectedCharacter ?  <CharacterInfo characters={data} characterID={selectedCharacter}/> : <h1>Nothing Selected</h1>}
-        </div>
-        </Col>
-      </Row>
+                    // fetchMoreResult.characters.results = [
+                    //   ...prevResult.characters.results,
+                    //   ...fetchMoreResult.characters.results
+                    // ];
+                    return fetchMoreResult;
+                  }
+                });
+              }
+              else{
+                alert('No more Results')
+              }
+              }}>Load More</button>
+          </div>
+          </Col>
+          <Col xs={6}> 
+          <div id="fixedContainerRight">
+          {selectedCharacter ?  <CharacterInfo characters={data} characterID={selectedCharacter}/> : <h1 id="notSelected">Nothing Selected</h1>}
+          </div>
+          </Col >
+        </Row>
       </Container>
+
 
 
     

@@ -9,6 +9,8 @@
 	border: 2px solid #494949 !important;
 	display: inline-block;
 	transition: all 0.4s ease 0s;
+	margin-left: 10px;
+	
   }
 
 .bn5:hover {
@@ -28,4 +30,5 @@
 	border: 2px solid #494949 !important;
 	display: inline-block;
 	transition: all 0.4s ease 0s;
+	margin-left:4.5%
   }

@@ -1,5 +1,5 @@
 import {useState} from 'react'
-import { Container, Row, Col} from 'react-bootstrap';
+import { Container} from 'react-bootstrap';
 import '../styles/search.css'
 
 //can pass props and refer with props.onAdd etc
@@ -27,16 +27,11 @@ const Search = (props) => {
 
        
         <form className='search-form' onSubmit={onSubmit}>
-            <Container>
-                <Row>
-                    <Col>
+            <Container fluid>
+                <div id='searchContainer'>
                     <input type='text' placeholder='Search' className="search5" value={text} onChange={(e)=> setSearchItem(e.target.value)}/>
-                    </Col>
-                    <Col>
                     <input type='submit' value='Submit' className="bn5"/>
-                    </Col>
-
-                </Row>
+                </div>
             </Container>
         </form>
     )

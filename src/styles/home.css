@@ -2,14 +2,18 @@
 #fixedContainerLeft
 {
  
-  position: auto;
-
-  max-height: 900px;
-
-
+  position: fixed;
   overflow:auto;
+  width:40%;
+  margin-left:5%;
+  height:90%;
+  background-color: rgb(255, 255, 255);
+  box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+  
 
-  margin-top: 30px;
 
 
 }
@@ -17,16 +21,34 @@
 #fixedContainerRight
 {
   position: fixed;
-
-  max-height: 900px;
   /* min-width: 600px; */
-
   overflow:auto;
-
-  margin-top: 65px;
-
+  background-color: rgb(255, 255, 255);
+  height:90%;
+  width:45%;
+  margin-right: 10%;
+  box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgb(255,255,255),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
 
 }
+
+body {
+  background-color: rgb(238, 238, 238);
+}
+
+#searchBar{
+  margin-bottom: 10px;
+  background-color: rgb(238, 238, 238);
+}
+
+#notSelected{
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+
 
 #loading {
   background: url('../img/rick.gif') no-repeat center center;
@@ -35,7 +57,7 @@
   top: 0;
   left: 0;
   height: 100%;
-  width: 100%;
   z-index: 9999999;
 }
+
 

@@ -23,9 +23,9 @@ const DisplayList = ({characters,getCharacterInfo}) => {
         {search.map(character => (
 
             <div key={character.id} >
-              <Container fluid>
+              <Container  fluid>
               <Row>
-              <Col xs={12} md={8}>
+              <Col>
               <Media>
                 <img
                   width={64}
@@ -40,7 +40,7 @@ const DisplayList = ({characters,getCharacterInfo}) => {
                 </Media.Body>
               </Media>
               </Col>
-              <Col xs={6} md={4}>
+              <Col  md="auto">
                 <ShowButton character={character} getCharacterInfo={getCharacterInfo} />
               </Col>
               </Row>

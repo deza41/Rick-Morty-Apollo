@@ -21,6 +21,7 @@ https://rickandmortyapi.com/graphql
 
 Finished app:
 https://gallant-kowalevski-10b99c.netlify.app/
+[![Netlify Status](https://api.netlify.com/api/v1/badges/48fbc0e6-5537-4e5e-ad25-78bc6202b6fb/deploy-status)](https://app.netlify.com/sites/quizzical-gates-9a0204/deploys)
 
 
 
