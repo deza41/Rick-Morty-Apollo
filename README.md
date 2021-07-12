@@ -2,7 +2,8 @@
 
 App that uses Apollo to query the GraphQL end-point and display a list of characters and their details.
 
-![image](https://user-images.githubusercontent.com/15008435/125236896-1eced300-e328-11eb-99d8-f3cbf555e84a.png)
+![image](https://user-images.githubusercontent.com/15008435/125297479-9c1b3780-e36a-11eb-94b8-69466b5ca1b3.png)
+
 
 
 
