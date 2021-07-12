@@ -1,0 +1,32 @@
+.bn5 {
+    color: #494949 !important;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: #ffffff;
+	padding-left:10px;
+    padding-right:10px;
+    margin-top: 5px;
+	border: 2px solid #494949 !important;
+	display: inline-block;
+	transition: all 0.4s ease 0s;
+  }
+
+.bn5:hover {
+	color: #ffffff !important;
+	background: #535353;
+	border-color: #757575 !important;
+	transition: all 0.4s ease 0s;
+}
+
+.search5 {
+    color: #494949 !important;
+	text-transform: uppercase;
+	text-decoration: none;
+	background: #ffffff;
+	padding-left:10px;
+    padding-right:10px;
+    margin-top: 5px;
+	border: 2px solid #494949 !important;
+	display: inline-block;
+	transition: all 0.4s ease 0s;
+  }
