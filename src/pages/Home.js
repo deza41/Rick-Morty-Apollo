@@ -8,8 +8,6 @@ import Search from './../components/Search'
 import DisplayList from '../components/DisplayList'
 import CharacterInfo from '../components/CharacterInfo'
 
-
-
 const GET_CHARACTERS_QUERY = gql`
 query getCharList($page: Int, $search: String){
   characters(page: $page, filter: {name: $search}) {
@@ -48,7 +46,7 @@ const Home = () => {
     },);
 
     //check for loading or error (db)
-    if(loading){return <div id="loading"></div>};
+    if(loading){return <div id="loading">d</div>};
     if(error){return <p>Error...</p>};
 
       //setters
@@ -64,7 +62,6 @@ const Home = () => {
     //output
     return(
       <Container fluid>
-        <div id="loading"></div>
         <div id='searchBar'><Search searchList={searchList}/></div>
         <Row>
           <Col> 
