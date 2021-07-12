@@ -48,7 +48,7 @@ const Home = () => {
     },);
 
     //check for loading or error (db)
-    if(loading){return <p>Loading...</p>};
+    if(loading){return <div id="loading"></div>};
     if(error){return <p>Error...</p>};
 
       //setters
